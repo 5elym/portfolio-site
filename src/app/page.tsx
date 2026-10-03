@@ -22,7 +22,6 @@ export default function Portfolio() {
         </p>
 
         <div className="flex items-center justify-center gap-4 pt-4">
-          {/* shadcn Buttons automatically use your preset's primary and accent colors based on the variant */}
           <Button size="lg">View Projects</Button>
           <Button size="lg" variant="outline">
             Contact Me

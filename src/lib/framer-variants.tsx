@@ -1,6 +1,6 @@
 import { Variants } from "framer-motion";
 
-const containerVariants: Variants = {
+const globalContainerVariants: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -10,9 +10,9 @@ const containerVariants: Variants = {
   },
 };
 
-const itemVariants: Variants = {
+const globalItemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
-export { containerVariants, itemVariants };
+export { globalContainerVariants, globalItemVariants };

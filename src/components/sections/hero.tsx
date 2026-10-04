@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { GitBranch, Waypoints, Mail } from "lucide-react";
 import ScrollHint from "../scroll-hint";
+import { SiGmail, SiGithub } from "@icons-pack/react-simple-icons";
 
 export default function Hero() {
   return (
@@ -30,14 +31,29 @@ export default function Hero() {
           </div>
 
           <div className="flex items-center justify-center gap-6 pt-12 text-muted-foreground">
-            <a href="#" className="hover:text-primary transition-colors">
-              <GitBranch size={24} />
+            <a
+              href="https://github.com/5elym"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
+              <SiGithub size={24} />
             </a>
-            <a href="#" className="hover:text-primary transition-colors">
+            <a
+              href="https://www.linkedin.com/in/myles-swamy/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
               <Waypoints size={24} />
             </a>
-            <a href="#" className="hover:text-primary transition-colors">
-              <Mail size={24} />
+            <a
+              href="mailto:myles.swamy@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
+              <SiGmail size={24} />
             </a>
           </div>
 

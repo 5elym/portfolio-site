@@ -7,7 +7,7 @@ import { SiGmail, SiGithub } from "@icons-pack/react-simple-icons";
 export default function Hero() {
   return (
     <>
-      <main className="relative min-h-screen text-foreground flex flex-col items-center justify-center p-6">
+      <main id="hero" className="relative min-h-screen text-foreground flex flex-col items-center justify-center p-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

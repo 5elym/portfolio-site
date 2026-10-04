@@ -28,7 +28,7 @@ export default function Background() {
         <div
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='32' height='55' viewBox='0 0 32 55' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='18' r='1.5' fill='rgba(255, 255, 255, 0.15)'/%3E%3Ccircle cx='32' cy='46' r='1.5' fill='rgba(255, 255, 255, 0.15)'/%3E%3Ccircle cx='0' cy='46' r='1.5' fill='rgba(255, 255, 255, 0.15)'/%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='32' height='55' viewBox='0 0 32 55' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='18' r='1.5' fill='rgba(255, 255, 255, 0.2)'/%3E%3Ccircle cx='32' cy='46' r='1.5' fill='rgba(255, 255, 255, 0.2)'/%3E%3Ccircle cx='0' cy='46' r='1.5' fill='rgba(255, 255, 255, 0.2)'/%3E%3C/svg%3E")`,
             backgroundSize: "32px 55px",
           }}
         />

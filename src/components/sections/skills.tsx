@@ -14,7 +14,8 @@ const skillCategories = [
       "Ruby",
       "C#",
       "C++",
-      "JavaScript/TypeScript",
+      "JavaScript",
+      "TypeScript",
       "Kotlin",
       "HTML",
       "CSS",
@@ -25,11 +26,21 @@ const skillCategories = [
   },
   {
     title: "Frameworks",
-    skills: ["Rails", "React", "Jetpack Compose", "NodeJS", "JFrame", "TailwindCSS", "Spring Boot"],
+    skills: ["Rails", "React", "Jetpack Compose", "Next.js", "Node.js", "JFrame", "TailwindCSS", "Spring Boot"],
   },
   {
     title: "Tools",
-    skills: ["Git", "SQLite", "MySQL", "Visual Studio Code (VS Code)", "IntelliJ IDEA", "AI/LLMs"],
+    skills: [
+      "Git",
+      "SQLite",
+      "MySQL",
+      "GitHub",
+      "GitLab",
+      "Visual Studio Code (VS Code)",
+      "IntelliJ IDEA",
+      "Artificial Intelligence (AI)",
+      "Large Language Models (LLMs)",
+    ],
   },
   {
     title: "Platforms",

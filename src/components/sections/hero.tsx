@@ -16,7 +16,7 @@ export default function Hero() {
           className="space-y-8 text-center lg:text-left z-10"
         >
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-            Hi, I&apos;m <span className="text-primary">Myles</span>.
+            Hi, I&apos;m <span className="text-primary text-glow">Myles</span>.
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
@@ -24,38 +24,38 @@ export default function Hero() {
             diverse teams.
           </p>
 
-          <div className="flex items-center justify-center lg:justify-start gap-4 pt-4">
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-3 pt-4">
             <Button size="lg">View Projects</Button>
             <Button size="lg" variant="outline">
               Contact Me
             </Button>
-          </div>
 
-          <div className="flex items-center justify-center lg:justify-start gap-6 pt-8 text-muted-foreground">
-            <a
-              href="https://github.com/5elym"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
-            >
-              <SiGithub size={24} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/myles-swamy/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
-            >
-              <Waypoints size={24} />
-            </a>
-            <a
-              href="mailto:myles.swamy@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
-            >
-              <SiGmail size={24} />
-            </a>
+            <div className="ml-10 flex items-center gap-4 text-muted-foreground">
+              <a
+                href="https://github.com/5elym"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+              >
+                <SiGithub size={24} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/myles-swamy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+              >
+                <Waypoints size={24} />
+              </a>
+              <a
+                href="mailto:myles.swamy@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+              >
+                <SiGmail size={24} />
+              </a>
+            </div>
           </div>
         </motion.div>
 

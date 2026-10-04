@@ -132,3 +132,9 @@
     @apply font-sans;
   }
 }
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 75px rgba(239, 68, 68, 0.8);
+  }
+}

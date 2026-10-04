@@ -13,7 +13,7 @@ export default function AboutMe() {
           className="max-w-4xl mx-auto text-center space-y-8"
         >
           <motion.h2 className="text-5xl md:text-7xl font-bold tracking-tight">
-            About <span className="text-primary">Me</span>
+            About <span className="text-primary text-glow">Me</span>
           </motion.h2>
 
           <div className="text-lg md:text-xl text-muted-foreground space-y-6 leading-relaxed text-center max-w-2xl mx-auto">

@@ -89,7 +89,7 @@ export default function Skills() {
           viewport={{ once: true, amount: 0.5 }}
           className="text-5xl md:text-7xl font-bold tracking-tight mb-24 text-center"
         >
-          My <span className="text-primary">Skills</span>
+          My <span className="text-primary text-glow">Skills</span>
         </motion.h2>
 
         {/* Zigzag layout */}

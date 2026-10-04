@@ -7,7 +7,6 @@ export default function Navbar() {
   const { scrollY } = useScroll();
   const [isVisible, setIsVisible] = useState(false);
 
-  // Listen to the scroll position
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 400) {
       setIsVisible(true);

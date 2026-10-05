@@ -25,8 +25,10 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-3 pt-4">
-            <Button size="lg">View Projects</Button>
-            <Button size="lg" variant="outline">
+            <Button render={<a href="#projects" />} size="lg">
+              View Projects
+            </Button>
+            <Button render={<a href="#contact" />} size="lg" variant="outline">
               Contact Me
             </Button>
 

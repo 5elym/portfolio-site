@@ -1,0 +1,141 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
+import { SiGithub } from "@icons-pack/react-simple-icons";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { globalContainerVariants, globalItemVariants } from "@/lib/framer-variants";
+
+// 1. Your Projects Data
+const projectsData = [
+  {
+    id: "01",
+    title: "E-Commerce Dashboard",
+    scope: "[ FULL-STACK ] [ AGILE ] [ B2B ]",
+    techStack: ["Next.js", "TypeScript", "Tailwind", "PostgreSQL", "Prisma"],
+    bullets: [
+      "Engineered a real-time inventory management system reducing stock discrepancies by 40%.",
+      "Implemented role-based access control (RBAC) for secure admin and vendor routing.",
+      "Built a custom analytics dashboard using Recharts to visualize monthly revenue streams.",
+    ],
+    liveUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    id: "02",
+    title: "Quantum Task Manager",
+    scope: "[ FRONT-END ] [ WEB APP ] [ UX/UI ]",
+    techStack: ["React", "Redux Toolkit", "Framer Motion", "Firebase"],
+    bullets: [
+      "Designed a highly interactive drag-and-drop Kanban board using Framer Motion.",
+      "Optimized state management with Redux Toolkit, ensuring zero layout shift on massive datasets.",
+      "Integrated Firebase for real-time collaborative updates across multiple active sessions.",
+    ],
+    liveUrl: "#",
+    githubUrl: "#",
+  },
+];
+
+export default function Projects() {
+  return (
+    <section id="projects" className="py-32 px-6 overflow-hidden">
+      <div className="max-w-7xl mx-auto w-full">
+        <motion.h2
+          variants={globalContainerVariants}
+          initial={"hidden"}
+          whileInView={"show"}
+          viewport={{ once: true }}
+          className="text-5xl md:text-7xl font-bold tracking-tight mb-32 text-center"
+        >
+          Featured <span className="text-primary text-glow">Projects</span>
+        </motion.h2>
+
+        {/* The Projects List */}
+        <div className="flex flex-col gap-32 md:gap-48">
+          {projectsData.map((project) => (
+            <motion.div
+              key={project.id}
+              variants={globalItemVariants}
+              initial={"hidden"}
+              whileInView={"show"}
+              viewport={{ once: true, margin: "-100px" }}
+              className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center lg:items-start"
+            >
+              {/* Image box */}
+              <div className="w-full lg:w-1/3 relative group">
+                {/* Red glow behind image */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/20 blur-[80px] rounded-full z-0 pointer-events-none transition-all duration-700 group-hover:bg-primary/40 group-hover:scale-110"></div>
+
+                {/* Image container */}
+                <div className="relative z-10 aspect-4/3 rounded-xl border border-zinc-800 bg-zinc-900/50 backdrop-blur-sm overflow-hidden flex items-center justify-center shadow-2xl transition-transform duration-500 group-hover:-translate-y-2 group-hover:border-primary/50">
+                  {/* PLACEHOLDER */}
+                  <div className="text-zinc-600 font-mono text-sm flex flex-col items-center gap-2">
+                    <span className="text-4xl text-zinc-800">{project.id}</span>
+                    IMAGE PLACEHOLDER
+                  </div>
+                </div>
+              </div>
+
+              {/* The content */}
+              <div className="w-full lg:w-2/3 flex flex-col pt-2">
+                {/* Scope */}
+                <span className="font-mono text-sm font-semibold tracking-widest text-primary mb-3">
+                  {project.scope}
+                </span>
+
+                {/* Title */}
+                <h3 className="text-3xl md:text-5xl font-bold text-foreground mb-6">{project.title}</h3>
+
+                {/* Tech Stack */}
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {project.techStack.map((tech) => (
+                    <Badge key={tech} variant="outline">
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+
+                {/* Bullet points */}
+                <ul className="space-y-4 mb-10 text-lg text-muted-foreground">
+                  {project.bullets.map((bullet, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="text-primary mt-1.5 shrink-0 text-sm">▹</span> {/* Custom red bullet marker */}
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Links */}
+                <div className="flex flex-wrap gap-4 mt-auto">
+                  <Button
+                    render={
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink size={18} />
+                        Live Demo
+                      </a>
+                    }
+                    size="lg"
+                    className="gap-2 font-semibold"
+                  ></Button>
+
+                  <Button
+                    render={
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <SiGithub size={18} />
+                        View Code
+                      </a>
+                    }
+                    size="lg"
+                    variant="outline"
+                    className="gap-2"
+                  ></Button>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

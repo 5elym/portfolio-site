@@ -11,29 +11,42 @@ import { globalContainerVariants, globalItemVariants } from "@/lib/framer-varian
 const projectsData = [
   {
     id: "01",
-    title: "E-Commerce Dashboard",
-    scope: "[ FULL-STACK ] [ AGILE ] [ B2B ]",
-    techStack: ["Next.js", "TypeScript", "Tailwind", "PostgreSQL", "Prisma"],
+    title: "VSCode Extension that Gamifies Unit Testing",
+    scope: "[ FULL-STACK ] [ SOFTWARE TESTING ] [ RESTAPI ]",
+    techStack: ["TypeScript", "Python", "GitHub API", "FastAPI", "VS Code Extension API"],
     bullets: [
-      "Engineered a real-time inventory management system reducing stock discrepancies by 40%.",
-      "Implemented role-based access control (RBAC) for secure admin and vendor routing.",
-      "Built a custom analytics dashboard using Recharts to visualize monthly revenue streams.",
+      "Engineered a full-stack VS Code extension utilising TypeScript for the frontend and a Python API backend to gamify developers' unit testing workflows.",
+      "Implemented an asynchronous multiplayer game loop where an 'Attacker' writes failing tests to challenge a function, and a 'Defender' refactors the code to pass them.",
+      "Integrated repository-specific leaderboards that dynamically track and display user experience points (XP) based on their testing and debugging actions.",
     ],
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "",
+    githubUrl: "https://github.com/5elym/TestBattle",
   },
   {
     id: "02",
-    title: "Quantum Task Manager",
-    scope: "[ FRONT-END ] [ WEB APP ] [ UX/UI ]",
-    techStack: ["React", "Redux Toolkit", "Framer Motion", "Firebase"],
+    title: "Pseudo-3D Raycasting Engine Using the DDA Algorithm ",
+    scope: "[ GRAPHICS ] [ ALGORITHMS ] [ GAME DEVELOPMENT ] [ IO ]",
+    techStack: ["Java", "JFrame"],
     bullets: [
-      "Designed a highly interactive drag-and-drop Kanban board using Framer Motion.",
-      "Optimized state management with Redux Toolkit, ensuring zero layout shift on massive datasets.",
-      "Integrated Firebase for real-time collaborative updates across multiple active sessions.",
+      "Developed a pseudo-3D raycasting engine from scratch using Java and JFrame to render a 3D environment from a 2D perspective.",
+      "Implemented the Digital Differential Analyzer (DDA) algorithm to ensure highly efficient wall detection mechanics.",
+      "Engineered a robust parsing system that generates a navigable 3D world based on a simple, user-editable. plain text file.",
     ],
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "",
+    githubUrl: "https://github.com/5elym/java-raycasting-engine",
+  },
+  {
+    id: "03",
+    title: "News Article Aggregator with Searchable User Queries and Filtering",
+    scope: "[ WEB DEVELOPMENT ] [ FULL-STACK ] [ RESTAPI ]",
+    techStack: ["Java", "Spring Boot", "React.js", "TailwindCSS", "TypeScript"],
+    bullets: [
+      "Designed and implemented a full stack web application that aggregates news articles from multiple third part news APIs and displays them in a user-friendly interface.",
+      "Utilised React and TailwindCSS to create a responsive and visually appealing frontend, while leveraging Spring Boot for the backend to handle API requests and data processing.",
+      "Implemented a search and filtering system that allows users to query articles based on source, categories, and publication dates, enhancing the user experience and accessibility of information.",
+    ],
+    liveUrl: "",
+    githubUrl: "https://github.com/5elym/news-aggregator",
   },
 ];
 
@@ -108,17 +121,18 @@ export default function Projects() {
 
                 {/* Links */}
                 <div className="flex flex-wrap gap-4 mt-auto">
-                  <Button
-                    render={
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink size={18} />
-                        Live Demo
-                      </a>
-                    }
-                    size="lg"
-                    className="gap-2 font-semibold"
-                  ></Button>
-
+                  {project.liveUrl && (
+                    <Button
+                      render={
+                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink size={18} />
+                          Live Demo
+                        </a>
+                      }
+                      size="lg"
+                      className="gap-2 font-semibold"
+                    ></Button>
+                  )}
                   <Button
                     render={
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">

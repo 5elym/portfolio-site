@@ -1,11 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Terminal } from "lucide-react";
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { globalContainerVariants, globalItemVariants } from "@/lib/framer-variants";
+import JavaModal from "@/components/java-modal";
+import { useState } from "react";
 
 // 1. Your Projects Data
 const projectsData = [
@@ -19,7 +21,11 @@ const projectsData = [
       "Implemented an asynchronous multiplayer game loop where an 'Attacker' writes failing tests to challenge a function, and a 'Defender' refactors the code to pass them.",
       "Integrated repository-specific leaderboards that dynamically track and display user experience points (XP) based on their testing and debugging actions.",
     ],
-    liveUrl: "",
+    demo: {
+      type: "external-link",
+      url: "https://google.com",
+      label: "Live Demo",
+    },
     githubUrl: "https://github.com/5elym/TestBattle",
   },
   {
@@ -32,7 +38,10 @@ const projectsData = [
       "Implemented the Digital Differential Analyzer (DDA) algorithm to ensure highly efficient wall detection mechanics.",
       "Engineered a robust parsing system that generates a navigable 3D world based on a simple, user-editable. plain text file.",
     ],
-    liveUrl: "",
+    demo: {
+      type: "java-modal",
+      label: "Run in Browser",
+    },
     githubUrl: "https://github.com/5elym/java-raycasting-engine",
   },
   {
@@ -45,12 +54,18 @@ const projectsData = [
       "Utilised React and TailwindCSS to create a responsive and visually appealing frontend, while leveraging Spring Boot for the backend to handle API requests and data processing.",
       "Implemented a search and filtering system that allows users to query articles based on source, categories, and publication dates, enhancing the user experience and accessibility of information.",
     ],
-    liveUrl: "",
+    demo: {
+      type: "",
+      url: "",
+      label: "NONE",
+    },
     githubUrl: "https://github.com/5elym/news-aggregator",
   },
 ];
 
 export default function Projects() {
+  const [isJavaModalOpen, setIsJavaModalOpen] = useState(false);
+
   return (
     <section id="projects" className="py-32 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto w-full">
@@ -121,18 +136,34 @@ export default function Projects() {
 
                 {/* Links */}
                 <div className="flex flex-wrap gap-4 mt-auto">
-                  {project.liveUrl && (
+                  {/* website */}
+                  {project.demo.type === "external-link" && (
                     <Button
                       render={
-                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        <a href={project.demo.url} target="_blank" rel="noopener noreferrer">
                           <ExternalLink size={18} />
-                          Live Demo
+                          {project.demo.label}
                         </a>
                       }
                       size="lg"
                       className="gap-2 font-semibold"
                     ></Button>
                   )}
+
+                  {/* java */}
+                  {project.demo.type === "java-modal" && (
+                    <Button
+                      onClick={() => {
+                        setIsJavaModalOpen(true); // Open the modal
+                      }}
+                      size="lg"
+                      className="gap-2 font-semibold"
+                    >
+                      <Terminal size={18} />
+                      {project.demo.label}
+                    </Button>
+                  )}
+
                   <Button
                     render={
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
@@ -150,6 +181,11 @@ export default function Projects() {
           ))}
         </div>
       </div>
+      <JavaModal
+        isOpen={isJavaModalOpen}
+        onClose={() => setIsJavaModalOpen(false)}
+        jarUrl="/raycaster.jar" // Must match the name of your file in the public folder
+      />
     </section>
   );
 }

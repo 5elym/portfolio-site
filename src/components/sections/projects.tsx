@@ -13,6 +13,23 @@ import { useState } from "react";
 const projectsData = [
   {
     id: "01",
+    title: "News Article Aggregator with Searchable User Queries and Filtering",
+    scope: "[ WEB DEVELOPMENT ] [ FULL-STACK ] [ RESTAPI ]",
+    techStack: ["Java", "Spring Boot", "React.js", "TailwindCSS", "TypeScript"],
+    bullets: [
+      "Designed and implemented a full stack web application that aggregates news articles from multiple third part news APIs and displays them in a user-friendly interface.",
+      "Utilised React and TailwindCSS to create a responsive and visually appealing frontend, while leveraging Spring Boot for the backend to handle API requests and data processing.",
+      "Implemented a search and filtering system that allows users to query articles based on source, categories, and publication dates, enhancing the user experience and accessibility of information.",
+    ],
+    demo: {
+      type: "external-link",
+      url: "https://mynewsintelligence.vercel.app",
+      label: "Visit Website",
+    },
+    githubUrl: "https://github.com/5elym/news-aggregator",
+  },
+  {
+    id: "02",
     title: "VSCode Extension that Gamifies Unit Testing",
     scope: "[ FULL-STACK ] [ SOFTWARE TESTING ] [ RESTAPI ]",
     techStack: ["TypeScript", "Python", "GitHub API", "FastAPI", "VS Code Extension API"],
@@ -22,14 +39,14 @@ const projectsData = [
       "Integrated repository-specific leaderboards that dynamically track and display user experience points (XP) based on their testing and debugging actions.",
     ],
     demo: {
-      type: "external-link",
-      url: "https://google.com",
-      label: "Live Demo",
+      type: "",
+      url: "",
+      label: "",
     },
     githubUrl: "https://github.com/5elym/TestBattle",
   },
   {
-    id: "02",
+    id: "03",
     title: "Pseudo-3D Raycasting Engine Using the DDA Algorithm ",
     scope: "[ GRAPHICS ] [ ALGORITHMS ] [ GAME DEVELOPMENT ] [ IO ]",
     techStack: ["Java", "JFrame"],
@@ -43,23 +60,6 @@ const projectsData = [
       label: "Run in Browser",
     },
     githubUrl: "https://github.com/5elym/java-raycasting-engine",
-  },
-  {
-    id: "03",
-    title: "News Article Aggregator with Searchable User Queries and Filtering",
-    scope: "[ WEB DEVELOPMENT ] [ FULL-STACK ] [ RESTAPI ]",
-    techStack: ["Java", "Spring Boot", "React.js", "TailwindCSS", "TypeScript"],
-    bullets: [
-      "Designed and implemented a full stack web application that aggregates news articles from multiple third part news APIs and displays them in a user-friendly interface.",
-      "Utilised React and TailwindCSS to create a responsive and visually appealing frontend, while leveraging Spring Boot for the backend to handle API requests and data processing.",
-      "Implemented a search and filtering system that allows users to query articles based on source, categories, and publication dates, enhancing the user experience and accessibility of information.",
-    ],
-    demo: {
-      type: "",
-      url: "",
-      label: "NONE",
-    },
-    githubUrl: "https://github.com/5elym/news-aggregator",
   },
 ];
 

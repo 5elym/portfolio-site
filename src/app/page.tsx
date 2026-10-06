@@ -1,6 +1,7 @@
 "use client";
 
 import AboutMe from "@/components/sections/aboutme";
+import Contact from "@/components/sections/contact";
 import Education from "@/components/sections/education";
 import Hero from "@/components/sections/hero";
 import Projects from "@/components/sections/projects";
@@ -28,7 +29,7 @@ export default function Portfolio() {
 
       <Separator className="w-2/3! mx-auto" />
 
-      <AboutMe />
+      <Contact />
     </>
   );
 }

@@ -139,6 +139,7 @@ export default function Projects() {
                   {/* website */}
                   {project.demo.type === "external-link" && (
                     <Button
+                      nativeButton={false}
                       render={
                         <a href={project.demo.url} target="_blank" rel="noopener noreferrer">
                           <ExternalLink size={18} />
@@ -165,6 +166,7 @@ export default function Projects() {
                   )}
 
                   <Button
+                    nativeButton={false}
                     render={
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                         <SiGithub size={18} />

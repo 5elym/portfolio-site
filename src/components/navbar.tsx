@@ -60,6 +60,13 @@ export default function Navbar() {
         >
           Education
         </a>
+
+        <a
+          href="#contact"
+          className="px-4 py-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-popover"
+        >
+          Contact
+        </a>
       </nav>
     </motion.div>
   );

@@ -12,7 +12,7 @@ const educationData = [
     startYear: "2016",
     endYear: "2021",
     degree: "GCSEs",
-    grades: "99999855",
+    grades: " [ 9 9 9 9 9 8 5 5 ]",
     subjects: [
       "Computer Science",
       "Mathematics",
@@ -30,7 +30,7 @@ const educationData = [
     startYear: "2021",
     endYear: "2023",
     degree: "A-Levels",
-    grades: "AAB",
+    grades: " [ A A B ]",
     subjects: ["Computer Science", "Mathematics", "Physics"],
   },
   {
@@ -39,7 +39,7 @@ const educationData = [
     startYear: "2023",
     endYear: "2026",
     degree: "BSc Computer Science",
-    grades: "First-Class Honours",
+    grades: "[ FIRST-CLASS HONOURS ]",
     subjects: ["PLACEHOLDER", "PLACEHOLDER", "PLACEHOLDER"],
   },
 ];
@@ -116,7 +116,7 @@ export default function Education() {
                 className="flex-1 pl-6 md:pl-12"
               >
                 <h4 className="text-lg md:text-xl font-semibold text-zinc-200 mb-1">{item.degree}</h4>
-                <p className="text-primary font-medium mb-3">{item.grades}</p>
+                <p className="text-primary font-semibold font-mono tracking-widest mb-3">{item.grades}</p>
 
                 {/* Subjects Pills */}
                 <div className="flex flex-wrap gap-2">

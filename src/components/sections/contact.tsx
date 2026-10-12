@@ -35,7 +35,7 @@ export default function Contact() {
       className="min-h-[85vh] py-32 px-6 flex items-center text-foreground"
       aria-labelledby="contact-heading"
     >
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-[minmax(0,0.9fr)_1px_minmax(0,1.1fr)] gap-12 lg:gap-16 items-center">
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_1px_minmax(0,1fr)] gap-12 lg:gap-16 items-center">
         <motion.div
           variants={globalContainerVariants}
           initial="hidden"

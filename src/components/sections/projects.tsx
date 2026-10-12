@@ -8,11 +8,13 @@ import { Badge } from "@/components/ui/badge";
 import { globalContainerVariants, globalItemVariants } from "@/lib/framer-variants";
 import JavaModal from "@/components/java-modal";
 import { useState } from "react";
+import Image from "next/image";
 
 // 1. Your Projects Data
 const projectsData = [
   {
     id: "01",
+    image: "/NewsIntelligenceIMAGE.png",
     title: "News Article Aggregator with Searchable User Queries and Filtering",
     scope: "[ WEB DEVELOPMENT ] [ FULL-STACK ] [ RESTAPI ]",
     techStack: ["Java", "Spring Boot", "React.js", "TailwindCSS", "TypeScript"],
@@ -47,6 +49,7 @@ const projectsData = [
   },
   {
     id: "03",
+    image: "/raycasterIMAGE.png",
     title: "Pseudo-3D Raycasting Engine Using the DDA Algorithm ",
     scope: "[ GRAPHICS ] [ ALGORITHMS ] [ GAME DEVELOPMENT ] [ IO ]",
     techStack: ["Java", "JFrame"],
@@ -98,10 +101,19 @@ export default function Projects() {
                 {/* Image container */}
                 <div className="relative z-10 aspect-4/3 rounded-xl border border-zinc-800 bg-zinc-900/50 backdrop-blur-sm overflow-hidden flex items-center justify-center shadow-2xl transition-transform duration-500 group-hover:-translate-y-2 group-hover:border-primary/50">
                   {/* PLACEHOLDER */}
-                  <div className="text-zinc-600 font-mono text-sm flex flex-col items-center gap-2">
-                    <span className="text-4xl text-zinc-800">{project.id}</span>
-                    IMAGE PLACEHOLDER
-                  </div>
+                  {project.image ? (
+                    <Image
+                      src={project.image}
+                      alt={`${project.title} interface`}
+                      fill
+                      className="object-cover object-top opacity-80 transition-opacity duration-500 group-hover:opacity-100"
+                    />
+                  ) : (
+                    <div className="text-zinc-600 font-mono text-sm flex flex-col items-center gap-2">
+                      <span className="text-4xl text-zinc-800">{project.id}</span>
+                      NO IMAGE
+                    </div>
+                  )}
                 </div>
               </div>
 

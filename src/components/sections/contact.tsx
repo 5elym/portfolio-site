@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight, FileDown, Waypoints } from "lucide-react";
-import { SiGithub, SiGmail } from "@icons-pack/react-simple-icons";
+import { SiGithub, SiGmail, SiSpotify } from "@icons-pack/react-simple-icons";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { globalContainerVariants, globalItemVariants } from "@/lib/framer-variants";
@@ -25,6 +25,12 @@ const socialLinks = [
     address: "github.com/5elym",
     href: "https://github.com/5elym",
     icon: SiGithub,
+  },
+  {
+    label: "Spotify",
+    address: "https://open.spotify.com/user/uzx73zi2z6jgqk0kda2dpu1ge",
+    href: "https://open.spotify.com/user/uzx73zi2z6jgqk0kda2dpu1ge",
+    icon: SiSpotify,
   },
 ];
 

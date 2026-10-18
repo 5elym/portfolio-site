@@ -49,7 +49,7 @@ const projectsData = [
   },
   {
     id: "03",
-    image: "/raycasterIMAGE.png",
+    image: "/RaycasterIMAGE.png",
     title: "Pseudo-3D Raycasting Engine Using the DDA Algorithm ",
     scope: "[ GRAPHICS ] [ ALGORITHMS ] [ GAME DEVELOPMENT ] [ IO ]",
     techStack: ["Java", "JFrame"],
